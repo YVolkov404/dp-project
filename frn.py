@@ -1,11 +1,14 @@
-# using sources
+# for ITEA Programming Basics Course
+# diploma project
+# created by Yuriy Volkov 
 # os ---> https://docs.python.org/3/library/os.html
 # pathlib ---> https://stackabuse.com/python-list-files-in-a-directory/
 
 import os
 import pathlib
 
-path = os.path.realpath('./')   # set default path
+# default path as working dir
+path = os.path.realpath('./')
 work_folder = pathlib.Path(path)
 
 
@@ -121,13 +124,6 @@ def full_rename(filename1, filename2):
   next_name = filename2
   os.rename(last_name, next_name)
 
-# bulk file renaming [non-realized feature]
-""" def selective_rename(filename, input, output):
-  last_name = str(filename)
-  head, _sep, tail = last_name.rpartition(input)
-  next_name = head + output + tail
-  os.rename(last_name, next_name)
-  return next_name  """
 
 
 menu()
